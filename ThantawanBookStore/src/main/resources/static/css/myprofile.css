@@ -1,0 +1,41 @@
+.mt-5 .text-center .btn {
+    width: 100%;
+    height: 45px;
+    background: #60cc7d;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+}
+
+.mt-5 .text-center .edit {
+    width: 100%;
+    height: 45px;
+    background: #f87d79;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+}
+
+.mt-5 .text-center .btn:hover {
+    background: #5aa76e;
+    color: #ffffff;
+}
+
+.mt-5 .text-center .edit:hover {
+    background: #eb5451;
+    color: #ffffff;
+}
+
+
+.form-control:disabled {
+    background-color: #e96e6b; /* This will set the background color of disabled inputs to light gray */
+    color: #000;
+}

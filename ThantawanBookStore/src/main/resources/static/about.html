@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BookSaw - Free Book Store HTML CSS Template</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="author" content="" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="icomoon/icomoon.css" />
+    <link rel="stylesheet" type="text/css" href="css/vendor.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="css/login-register.css" />
+
+    <script
+      src="https://kit.fontawesome.com/e8800b60b5.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      var memberID = sessionStorage.getItem("memberID");
+    </script>
+  </head>
+
+  <body data-bs-spy="scroll" data-bs-target="#header" tabindex="0" class="body">
+    <div id="header-wrap">
+      <div class="top-content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="left-element">
+                <a href="#" class="for-buy login-registerpopup"
+                  ><i
+                    class="fas fa-exclamation-triangle"
+                    style="font-size: auto; color: red"
+                  ></i
+                  ><span> Report</span></a
+                >
+              </div>
+              <!--report-->
+            </div>
+
+            <div class="col-md-6">
+              <div class="right-element">
+                <a href="#" class="user-account for-buy login-registerpopup"
+                  ><i class="icon icon-user"></i><span> Login/Register</span></a
+                >
+                <a href="#" class="cart for-buy login-registerpopup"
+                  ><i class="icon icon-clipboard"></i
+                  ><span> Cart:(0 ฿)</span></a
+                >
+                <a href="#" class="cart for-buy login-registerpopup"
+                  ><i class="icon icon-currency-dollar"></i
+                  ><span> Wallet:(0 ฿)</span></a
+                >
+
+                <div class="action-menu">
+                  <div class="search-bar">
+                    <a
+                      href="#"
+                      class="search-button search-toggle"
+                      data-selector="#header-wrap"
+                    >
+                      <i class="icon icon-search"></i>
+                    </a>
+                    <form role="search" method="get" class="search-box">
+                      <input
+                        class="search-field text search-input"
+                        placeholder="Search"
+                        type="search"
+                      />
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <!--top-right-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--top-content-->
+
+      <header id="header">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-2">
+              <div class="main-logo">
+                <a href="index.html"
+                  ><img src="images/THANTAWAN RENT BOOK.png" alt="logo"
+                /></a>
+              </div>
+            </div>
+
+            <div class="col-md-10">
+              <nav id="navbar">
+                <div class="main-menu stellarnav">
+                  <ul class="menu-list">
+                    <li class="menu-item">
+                      <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="menu-item has-sub">
+                      <a href="#pages" class="nav-link active">Pages</a>
+
+                      <ul>
+                        <li class="active">
+                          <a href="about.html">About US</a>
+                        </li>
+                        <li><a href="shop.html">Book Store</a></li>
+                        <li><a href="BookStand.html">BookStand</a></li>
+                      </ul>
+                    </li>
+                    <li class="menu-item">
+                      <a href="#popular-books" class="nav-link">Popular</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="#" class="nav-link">History</a>
+                    </li>
+                  </ul>
+
+                  <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+    <!--header-wrap-->
+
+    <div class="wrapper">
+      <span class="icon-closeio"
+        ><ion-icon name="close-outline"></ion-icon
+      ></span>
+
+      <div class="form-box login">
+        <h2>Login</h2>
+        <form id="loginForm">
+          <div class="input-box">
+            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+            <input type="text" name="loginID" required />
+            <label>Username/CitizenID</label>
+          </div>
+          <div class="input-box">
+            <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+            <input type="password" name="password" required />
+            <label>Password</label>
+          </div>
+          <div class="remember-forgot">
+            <label><input type="checkbox" /> Remember me</label>
+            <a href="#">Forgot Password?</a>
+          </div>
+          <button type="submit" class="btn">Login</button>
+          <div class="login-register">
+            <p>
+              Don't have an account?<a href="#" class="register-link">
+                Register</a
+              >
+            </p>
+          </div>
+        </form>
+      </div>
+      <div class="form-box register">
+        <h2>Registration</h2>
+        <form id="registerForm">
+          <div class="input-box">
+            <span class="icon"><ion-icon name="person"></ion-icon></span>
+            <input type="text" name="username" required />
+            <label>Username</label>
+          </div>
+          <div class="input-box">
+            <span class="icon"><ion-icon name="id-card"></ion-icon></span>
+            <input
+              type="text"
+              pattern="\d{13}"
+              title="Please enter exactly 13 digits"
+              name="citizenID"
+              required
+            />
+            <label>Citizen ID</label>
+          </div>
+          <div class="input-box">
+            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+            <input type="email" name="email" required />
+            <label>Email</label>
+          </div>
+          <div class="input-box">
+            <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+            <input
+              type="password"
+              name="password"
+              pattern="(?=.*\d)(?=.*[a-zA-Z])(?=.*[\W]).{8,}"
+              title="Password must contain at least one number[0-9], one letter[a-zA-Z], one special character[!@#$%^&*+`~=?\|<>/], and be at least 8 characters long"
+              required
+            />
+            <label>Password</label>
+          </div>
+          <div class="remember-forgot">
+            <label
+              ><input
+                type="checkbox"
+                required
+                title="You need to accept the term & conditions before register an account"
+              />
+              I agree to the <a href="#">terms & conditions</a></label
+            >
+          </div>
+          <button type="submit" class="btn">Register</button>
+          <div class="login-register">
+            <p>
+              Already have an account?<a href="#" class="login-link"> Login</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="site-banner">
+      <div class="banner-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="colored">
+                <h1 class="page-title">About Us</h1>
+                <div class="breadcum-items">
+                  <span class="item"><a href="index.html">Home /</a></span>
+                  <span class="item colored">About Us</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--site-banner-->
+
+    <section class="chief-detail padding-medium">
+      <div class="container">
+        <div class="row">
+          <div class="single-image col-md-12">
+            <p>
+              Books are media that help humans gain knowledge and understanding.
+              Even today there is technology involved and more online media can
+              be accessed. But nowadays, reading from a book is still popular.
+              According to Statista Advertising & Media Outlook, global book
+              market revenue in 2024 is forecast to be US$8,405 million. The
+              average growth rate of book income between 2024 and 2029 is 0.56%
+              per year. There is additional information from the publisher 'Por
+              Phatthana' who gave an interview in Thairath media, revealing that
+              paper is more expensive because most of it is imported. Entering
+              from abroad The price of paper has been continually adjusted. As a
+              result, the cost per book is approximately 4 - 5% higher than
+              before. As a result, the price may need to be increased by 5 - 10%
+              according to market forces and from the 2022 book fair statistics
+              of the National Association of Publishers and Booksellers.
+              Thailand (PUBAT) reports that most Thai readers have a purchasing
+              power of books in the range of 500 - 1,000 baht/month. Most of the
+              customer base is in the age range of 23 - 28 years and has an
+              income in the range of 15,000 - 25,000 baht. The growth of the
+              minimum wage over the past ten years The rate increased by
+              approximately 13 - 36 baht/day. In conclusion, the price of books
+              increased in a way that was not balanced by the slightly higher
+              salary. The book looks expensive. And it makes many people think
+              carefully before buying each book. The above data shows that the
+              trend of reading books in physical form is becoming more popular.
+              Meanwhile, the price of books has also increased. As a result,
+              many people are hesitant to buy new books.
+            </p>
+
+            <p>
+              The Thantawan Rent Book application is an application that allows
+              readers to access books via the Internet without having to travel
+              to a book rental store. It will be an online platform with a
+              membership system or subscription service where users can access
+              various books, whether old or new. In the online format, users can
+              choose to use this application by paying a rental fee or
+              subscription for the desired period. And each member can use the
+              book rental service with no limit on the number of books or types
+              of books that can be accessed for a specified time.
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="section-title mb-4">Our Team</h3>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3">
+            <div class="team-member text-center pb-5">
+              <figure>
+                <a href="#"
+                  ><img src="images/มัด.png" alt="post" class="member-image"
+                /></a>
+              </figure>
+
+              <div class="member-details text-center">
+                <h4>Narephat Rungrumphan</h4>
+                <div class="designation colored">ม้วย</div>
+              </div>
+            </div>
+          </div>
+          <!--col-md-3-->
+
+          <div class="col-md-3 text-center">
+            <div class="team-member text-center pb-5">
+              <figure>
+                <img src="images/อุ้ม.png" alt="post" class="member-image" />
+              </figure>
+              <div class="member-details text-center">
+                <h4>Aumboon Rapanusit</h4>
+                <div class="designation colored">แม่อุ้ม</div>
+              </div>
+              <!--text-content-->
+            </div>
+          </div>
+          <!--col-md-3-->
+
+          <div class="col-md-3 text-center">
+            <div class="team-member text-center pb-5">
+              <figure>
+                <img src="images/บบ.png" alt="post" class="member-image" />
+              </figure>
+              <div class="member-details text-center">
+                <h4>Nattaporn Tantikulpanich</h4>
+                <div class="designation colored">ฟร้อนผู้ชื่อบาบี้</div>
+              </div>
+              <!--text-content-->
+            </div>
+          </div>
+          <!--col-md-3-->
+
+          <div class="col-md-3 text-center">
+            <div class="team-member text-center pb-5">
+              <figure>
+                <img src="images/ฟ้า.png" alt="post" class="member-image" />
+              </figure>
+              <div class="member-details text-center">
+                <h4>Thatpapat Wilaraj</h4>
+                <div class="designation colored">โคอาล่าที่ชื่อฟ้า</div>
+              </div>
+              <!--text-content-->
+            </div>
+          </div>
+          <!--col-md-3-->
+
+          <div class="col-md-3">
+            <div class="team-member text-center pb-5">
+              <figure>
+                <a href="#"
+                  ><img src="images/ปั๋น.png" alt="post" class="member-image"
+                /></a>
+              </figure>
+
+              <div class="member-details text-center">
+                <h4>Kanchanop Buarod</h4>
+                <div class="designation colored">
+                  น้องเล็กผู้เป็นให้ทุกอย่างแล้ว
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--col-md-3-->
+
+          <div class="col-md-3 text-center">
+            <div class="team-member text-center pb-5">
+              <figure>
+                <img src="images/เม.png" alt="post" class="member-image" />
+              </figure>
+              <div class="member-details text-center">
+                <h4>Achiraya Choocherd</h4>
+                <div class="designation colored">เมนวย</div>
+              </div>
+              <!--text-content-->
+            </div>
+          </div>
+          <!--col-md-3-->
+
+          <div class="col-md-3 text-center">
+            <div class="team-member text-center pb-5">
+              <figure>
+                <img src="images/ทตว.png" alt="post" class="member-image" />
+              </figure>
+              <div class="member-details text-center">
+                <h4>Thantawan Chitsan</h4>
+                <div class="designation colored">คนอาสาเลี้ยงหมูกระทะ</div>
+              </div>
+              <!--text-content-->
+            </div>
+          </div>
+          <!--col-md-3-->
+
+          <div class="col-md-3 text-center">
+            <div class="team-member text-center pb-5">
+              <figure>
+                <img src="images/เตชิต.png" alt="post" class="member-image" />
+              </figure>
+              <div class="member-details text-center">
+                <h4>Techit Chanlee</h4>
+                <div class="designation colored">กฟผู้เป็นยีราฟ</div>
+              </div>
+              <!--text-content-->
+            </div>
+          </div>
+          <!--col-md-3-->
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="footer-item">
+              <div class="company-brand">
+                <img
+                  src="images/main-logo.png"
+                  alt="logo"
+                  class="footer-logo"
+                />
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Sagittis sed ptibus liberolectus nonet psryroin. Amet sed
+                  lorem posuere sit iaculis amet, ac urna. Adipiscing fames
+                  semper erat ac in suspendisse iaculis.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-2">
+            <div class="footer-menu">
+              <h5>About Us</h5>
+              <ul class="menu-list">
+                <li class="menu-item">
+                  <a href="#">vision</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">articles </a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">careers</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">service terms</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">donate</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="footer-menu">
+              <h5>Discover</h5>
+              <ul class="menu-list">
+                <li class="menu-item">
+                  <a href="#">Home</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">Books</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">Authors</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">Subjects</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">Advanced Search</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="footer-menu">
+              <h5>My account</h5>
+              <ul class="menu-list">
+                <li class="menu-item">
+                  <a href="#">Sign In</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">View Cart</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">My Wishtlist</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">Track My Order</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="footer-menu">
+              <h5>Help</h5>
+              <ul class="menu-list">
+                <li class="menu-item">
+                  <a href="#">Help center</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">Report a problem</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">Suggesting edits</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">Contact us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- / row -->
+      </div>
+    </footer>
+
+    <div id="footer-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="copyright">
+              <div class="row">
+                <div class="col-md-6">
+                  <p>© 2023 All rights reserved.</p>
+                </div>
+              </div>
+            </div>
+            <!--grid-->
+          </div>
+          <!--footer-bottom-content-->
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/login-register.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  </body>
+  <div class="logout-btn" style="display: none">
+    <a href="" onclick="deleteSessionItem()">
+      <img class="logout-btn" src="images/logout.png" width="75" height="75"
+    /></a>
+  </div>
+</html>
